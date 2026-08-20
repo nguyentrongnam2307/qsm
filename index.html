@@ -1250,6 +1250,66 @@ tbody tr:hover td { background: #faf9f7; }
             <button class="log-pill" data-lhoutcome="BE"   onclick="logFilterHistOutcome(this,'BE')"   style="white-space:nowrap;" data-i18n="lbl.outcome.be">BE</button>
             <button class="log-pill" data-lhoutcome="Open" onclick="logFilterHistOutcome(this,'Open')" style="white-space:nowrap;" data-i18n="lbl.outcome.open">Đang mở</button>
           </div>
+          <!-- EMA 50 filter -->
+          <div style="display:flex;flex-wrap:nowrap;gap:4px;align-items:center;overflow-x:auto;padding-bottom:2px;margin-top:5px;-webkit-overflow-scrolling:touch;scrollbar-width:none;">
+            <span style="font-size:0.55rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--faint);font-weight:600;white-space:nowrap;flex-shrink:0;">EMA50</span>
+            <div id="lhist-filters-ema50" style="display:flex;gap:4px;flex-wrap:nowrap;">
+              <button class="log-pill active" data-lhema50="" onclick="logFilterHistField(this,'ema50','')" style="white-space:nowrap;">All</button>
+              <button class="log-pill" data-lhema50="Breakout" onclick="logFilterHistField(this,'ema50','Breakout')" style="white-space:nowrap;">Breakout</button>
+              <button class="log-pill" data-lhema50="Chưa Breakout" onclick="logFilterHistField(this,'ema50','Chưa Breakout')" style="white-space:nowrap;">Chưa Breakout</button>
+              <button class="log-pill" data-lhema50="Không rõ ràng" onclick="logFilterHistField(this,'ema50','Không rõ ràng')" style="white-space:nowrap;">Không rõ ràng</button>
+            </div>
+          </div>
+          <!-- Cấu Trúc filter -->
+          <div style="display:flex;flex-wrap:nowrap;gap:4px;align-items:center;overflow-x:auto;padding-bottom:2px;margin-top:5px;-webkit-overflow-scrolling:touch;scrollbar-width:none;">
+            <span style="font-size:0.55rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--faint);font-weight:600;white-space:nowrap;flex-shrink:0;">Cấu Trúc</span>
+            <div id="lhist-filters-cautruc" style="display:flex;gap:4px;flex-wrap:nowrap;">
+              <button class="log-pill active" data-lhcautruc="" onclick="logFilterHistField(this,'cauTruc','')" style="white-space:nowrap;">All</button>
+              <button class="log-pill" data-lhcautruc="Reversal" onclick="logFilterHistField(this,'cauTruc','Reversal')" style="white-space:nowrap;">Reversal</button>
+              <button class="log-pill" data-lhcautruc="Continue" onclick="logFilterHistField(this,'cauTruc','Continue')" style="white-space:nowrap;">Continue</button>
+            </div>
+          </div>
+          <!-- Engulfing filter -->
+          <div style="display:flex;flex-wrap:nowrap;gap:4px;align-items:center;overflow-x:auto;padding-bottom:2px;margin-top:5px;-webkit-overflow-scrolling:touch;scrollbar-width:none;">
+            <span style="font-size:0.55rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--faint);font-weight:600;white-space:nowrap;flex-shrink:0;">Engulfing</span>
+            <div id="lhist-filters-engulfing" style="display:flex;gap:4px;flex-wrap:nowrap;">
+              <button class="log-pill active" data-lheng="" onclick="logFilterHistField(this,'engulfing','')" style="white-space:nowrap;">All</button>
+              <button class="log-pill" data-lheng="M30" onclick="logFilterHistField(this,'engulfing','M30')" style="white-space:nowrap;">M30</button>
+              <button class="log-pill" data-lheng="H1"  onclick="logFilterHistField(this,'engulfing','H1')"  style="white-space:nowrap;">H1</button>
+              <button class="log-pill" data-lheng="H4"  onclick="logFilterHistField(this,'engulfing','H4')"  style="white-space:nowrap;">H4</button>
+              <button class="log-pill" data-lheng="Daily" onclick="logFilterHistField(this,'engulfing','Daily')" style="white-space:nowrap;">Daily</button>
+            </div>
+          </div>
+          <!-- Entry QM filter -->
+          <div style="display:flex;flex-wrap:nowrap;gap:4px;align-items:center;overflow-x:auto;padding-bottom:2px;margin-top:5px;-webkit-overflow-scrolling:touch;scrollbar-width:none;">
+            <span style="font-size:0.55rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--faint);font-weight:600;white-space:nowrap;flex-shrink:0;">Entry QM</span>
+            <div id="lhist-filters-qm" style="display:flex;gap:4px;flex-wrap:nowrap;">
+              <button class="log-pill active" data-lhqm="" onclick="logFilterHistField(this,'entryQM','')" style="white-space:nowrap;">All</button>
+              <button class="log-pill" data-lhqm="M5"  onclick="logFilterHistField(this,'entryQM','M5')"  style="white-space:nowrap;">M5</button>
+              <button class="log-pill" data-lhqm="M15" onclick="logFilterHistField(this,'entryQM','M15')" style="white-space:nowrap;">M15</button>
+              <button class="log-pill" data-lhqm="M30" onclick="logFilterHistField(this,'entryQM','M30')" style="white-space:nowrap;">M30</button>
+              <button class="log-pill" data-lhqm="H1"  onclick="logFilterHistField(this,'entryQM','H1')"  style="white-space:nowrap;">H1</button>
+              <button class="log-pill" data-lhqm="H4"  onclick="logFilterHistField(this,'entryQM','H4')"  style="white-space:nowrap;">H4</button>
+            </div>
+          </div>
+          <!-- Đảo cấu trúc khi khớp entry filter -->
+          <div style="display:flex;flex-wrap:nowrap;gap:4px;align-items:center;overflow-x:auto;padding-bottom:2px;margin-top:5px;-webkit-overflow-scrolling:touch;scrollbar-width:none;">
+            <span style="font-size:0.55rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--faint);font-weight:600;white-space:nowrap;flex-shrink:0;">Đảo CT</span>
+            <div id="lhist-filters-daocautruc" style="display:flex;gap:4px;flex-wrap:nowrap;">
+              <button class="log-pill active" data-lhdao="" onclick="logFilterHistField(this,'daoCauTruc','')" style="white-space:nowrap;">All</button>
+              <button class="log-pill" data-lhdao="Có" onclick="logFilterHistField(this,'daoCauTruc','Có')" style="white-space:nowrap;">Có</button>
+              <button class="log-pill" data-lhdao="Không" onclick="logFilterHistField(this,'daoCauTruc','Không')" style="white-space:nowrap;">Không</button>
+            </div>
+          </div>
+          <!-- Danger Zone filter -->
+          <div style="display:flex;flex-wrap:nowrap;gap:4px;align-items:center;overflow-x:auto;padding-bottom:2px;margin-top:5px;-webkit-overflow-scrolling:touch;scrollbar-width:none;">
+            <span style="font-size:0.55rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--faint);font-weight:600;white-space:nowrap;flex-shrink:0;">Danger Zone</span>
+            <div id="lhist-filters-dz" style="display:flex;gap:4px;flex-wrap:nowrap;">
+              <button class="log-pill active" data-lhdz="" onclick="logFilterHistField(this,'dangerZone','')" style="white-space:nowrap;">All</button>
+              <button class="log-pill" data-lhdz="Chưa chạm" onclick="logFilterHistField(this,'dangerZone','Chưa chạm')" style="white-space:nowrap;">Chưa chạm</button>
+              <button class="log-pill" data-lhdz="Đã Chạm" onclick="logFilterHistField(this,'dangerZone','Đã Chạm')" style="white-space:nowrap;">Đã Chạm</button>
+            </div>
+          </div>
         </div>
         <div class="log-tl-header">
           <input class="log-search-inp" id="lhist-search" placeholder="🔍 Tìm symbol..." data-i18n-ph="js.search.placeholder" oninput="logRenderHistory()"/>
@@ -2605,6 +2665,12 @@ let logFilterCaseSet = new Set();
 let logFilterHistCase = '';
 let logFilterHistTF = '';
 let logFilterHistOutcome = '';
+let logFilterHistEma50 = '';
+let logFilterHistCauTruc = '';
+let logFilterHistEngulfing = '';
+let logFilterHistEntryQM = '';
+let logFilterHistDaoCauTruc = '';
+let logFilterHistDangerZone = '';
 let logCharts = {};
 let logInited = false;
 
@@ -3697,12 +3763,41 @@ window.logFilterHistOutcome = (btn,val)=>{
   document.querySelectorAll('#lhist-filters-outcome [data-lhoutcome]').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');logRenderHistory();
 };
+// Generic field filter for new history filters
+const HIST_FILTER_MAP = {
+  ema50:      { stateKey: 'logFilterHistEma50',      containerSelector: '#lhist-filters-ema50 [data-lhema50]' },
+  cauTruc:    { stateKey: 'logFilterHistCauTruc',    containerSelector: '#lhist-filters-cautruc [data-lhcautruc]' },
+  engulfing:  { stateKey: 'logFilterHistEngulfing',  containerSelector: '#lhist-filters-engulfing [data-lheng]' },
+  entryQM:    { stateKey: 'logFilterHistEntryQM',    containerSelector: '#lhist-filters-qm [data-lhqm]' },
+  daoCauTruc: { stateKey: 'logFilterHistDaoCauTruc', containerSelector: '#lhist-filters-daocautruc [data-lhdao]' },
+  dangerZone: { stateKey: 'logFilterHistDangerZone', containerSelector: '#lhist-filters-dz [data-lhdz]' },
+};
+window.logFilterHistField = (btn, field, val) => {
+  const cfg = HIST_FILTER_MAP[field];
+  if (!cfg) return;
+  // Update state variable dynamically
+  if (field === 'ema50')      logFilterHistEma50      = val;
+  if (field === 'cauTruc')    logFilterHistCauTruc    = val;
+  if (field === 'engulfing')  logFilterHistEngulfing  = val;
+  if (field === 'entryQM')    logFilterHistEntryQM    = val;
+  if (field === 'daoCauTruc') logFilterHistDaoCauTruc = val;
+  if (field === 'dangerZone') logFilterHistDangerZone = val;
+  document.querySelectorAll(cfg.containerSelector).forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  logRenderHistory();
+};
 window.logRenderHistory = ()=>{
   const q=(document.getElementById('lhist-search')?.value||'').toLowerCase();
   const list=logTrades
     .filter(t=>!logFilterHistCase||t.caseType===logFilterHistCase)
     .filter(t=>!logFilterHistTF||t.entryTF===logFilterHistTF)
     .filter(t=>!logFilterHistOutcome||t.outcome===logFilterHistOutcome)
+    .filter(t=>!logFilterHistEma50||t.ema50===logFilterHistEma50)
+    .filter(t=>!logFilterHistCauTruc||t.cauTruc===logFilterHistCauTruc)
+    .filter(t=>!logFilterHistEngulfing||((t.engulfing||[]).includes(logFilterHistEngulfing)))
+    .filter(t=>!logFilterHistEntryQM||((t.entryQM||[]).includes(logFilterHistEntryQM)))
+    .filter(t=>!logFilterHistDaoCauTruc||t.daoCauTruc===logFilterHistDaoCauTruc)
+    .filter(t=>!logFilterHistDangerZone||t.dangerZone===logFilterHistDangerZone)
     .filter(t=>!q||t.symbol.toLowerCase().includes(q))
     .slice().sort((a,b)=>(b.openTime||'').localeCompare(a.openTime||''));
   const countEl=document.getElementById('lhist-count');
