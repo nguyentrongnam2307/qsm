@@ -602,7 +602,7 @@ tbody tr:hover td { background: #faf9f7; }
 
   <!-- WATCHLIST -->
   <div class="sec" id="sec-wl">
-    <div class="sec-head open" onclick="toggleSec('sec-wl')"><span class="sec-num">一</span><span class="sec-title" data-i18n="sec.watchlist">ウォッチリスト · 28 FXペア</span><div class="sec-line"></div><span class="sec-chevron">▲</span></div>
+    <div class="sec-head open" onclick="toggleSec('sec-wl')"><span class="sec-num">一</span><span class="sec-title" data-i18n="sec.watchlist">ウォッチリスト · 31 FXペア</span><div class="sec-line"></div><span class="sec-chevron">▲</span></div>
     <div class="sec-body">
     <div id="wl-login-note" style="display:none;"></div>
     <div id="wl-content">
@@ -2048,7 +2048,8 @@ const FX_PAIRS = [
   'CADCHF','CADJPY','CHFJPY',
   'EURAUD','EURCAD','EURCHF','EURGBP','EURJPY','EURNZD',
   'GBPCHF','GBPJPY','GBPAUD','GBPCAD','GBPNZD',
-  'NZDCAD','NZDCHF','NZDJPY','NZDUSD'
+  'NZDCAD','NZDCHF','NZDJPY','NZDUSD',
+  'XAUUSD','BTCUSD','ETHUSD'
 ];
 const WL_TFS = ['W','D','H4','H1','M30','M15','M5'];
 let wlData = {};
@@ -2634,7 +2635,8 @@ const LOG_PAIRS = [
   'CADCHF','CADJPY','CHFJPY',
   'EURAUD','EURCAD','EURCHF','EURGBP','EURJPY','EURNZD',
   'GBPCHF','GBPJPY','GBPAUD','GBPCAD','GBPNZD',
-  'NZDCAD','NZDCHF','NZDJPY','NZDUSD'
+  'NZDCAD','NZDCHF','NZDJPY','NZDUSD',
+  'XAUUSD','BTCUSD','ETHUSD'
 ];
 const LOG_TFS = ['W','D','H4','H1','M30','M15','M5'];
 const LOG_CASES = ['Case 01','Case 02','Case 03','Case 04'];
@@ -4528,7 +4530,7 @@ document.addEventListener('click', e => {
       'btn.skip':               'Bỏ qua',
 
       // ── SECTIONS ──
-      'sec.watchlist':          'Watchlist · 28 cặp FX',
+      'sec.watchlist':          'Watchlist · 31 cặp FX',
       'sec.rules':              'Quy tắc bắt buộc',
       'sec.cases':              '4 trường hợp entry',
       'sec.compare':            'So sánh độ tin cậy',
@@ -4738,7 +4740,7 @@ document.addEventListener('click', e => {
       'btn.skip':               'スキップ',
 
       // ── SECTIONS ──
-      'sec.watchlist':          'ウォッチリスト · 28 FXペア',
+      'sec.watchlist':          'ウォッチリスト · 31 FXペア',
       'sec.rules':              '必須ルール',
       'sec.cases':              '4つのエントリーケース',
       'sec.compare':            '信頼性比較',
