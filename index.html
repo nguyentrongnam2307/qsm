@@ -694,7 +694,7 @@ tbody tr:hover td { background: #faf9f7; }
         <div class="wm">01</div><div class="case-bar"></div>
         <div class="card-body">
           <div class="case-head">
-            <div class="case-tag">Trường Hợp 01 · Chỉ Dành Cho H4</div>
+            <div class="case-tag">EMA 50 · Chỉ Dành Cho H4</div>
             <div class="case-title">CHOCH M30</div>
             <p class="case-desc">Setup đơn giản nhất — H4 làm bias, pullback EMA50 H4, xuất hiện CHOCH M30 → entry M30</p>
           </div>
@@ -712,7 +712,7 @@ tbody tr:hover td { background: #faf9f7; }
         <div class="wm">02</div><div class="case-bar"></div>
         <div class="card-body">
           <div class="case-head">
-            <div class="case-tag">Trường Hợp 02 · Chỉ Dành Cho H1</div>
+            <div class="case-tag">Engulfing HTF · Chỉ Dành Cho H1</div>
             <div class="case-title">CHOCH M5</div>
             <p class="case-desc">Setup đơn giản nhất — H1 làm bias, pullback EMA50 H1, xuất hiện CHOCH M5 → entry M5</p>
           </div>
@@ -730,7 +730,7 @@ tbody tr:hover td { background: #faf9f7; }
         <div class="wm">03</div><div class="case-bar"></div>
         <div class="card-body">
           <div class="case-head">
-            <div class="case-tag">Trường Hợp 03 · Cấu Trúc Mạnh</div>
+            <div class="case-tag">EMA+Engulfing HTF · Cấu Trúc Mạnh</div>
             <div class="case-title" style="font-size:0.95rem;">CHOCH M30 / M15 / M5 → M1</div>
             <p class="case-desc">H1 phá cấu trúc — xác nhận M30/M15/M5 có CHOCH hoặc BOS, entry chính xác M1</p>
           </div>
@@ -791,8 +791,8 @@ tbody tr:hover td { background: #faf9f7; }
         <div class="kpi-card kpi-green"><div class="kpi-val" id="kpi-profit">—</div><div class="kpi-label" data-i18n="kpi.profit">Net Profit</div></div>
         <div class="kpi-card kpi-green"><div class="kpi-val" id="kpi-win">—</div><div class="kpi-label" data-i18n="kpi.winrate">Win Rate</div></div>
         <div class="kpi-card"><div class="kpi-val" id="kpi-pf">—</div><div class="kpi-label" data-i18n="kpi.pf">Profit Factor</div></div>
-        <div class="kpi-card"><div class="kpi-val" id="kpi-c1">—</div><div class="kpi-label" data-i18n="kpi.case01">Case 01</div></div>
-        <div class="kpi-card"><div class="kpi-val" id="kpi-c3">—</div><div class="kpi-label" data-i18n="kpi.case03">Case 03 ★</div></div>
+        <div class="kpi-card"><div class="kpi-val" id="kpi-c1">—</div><div class="kpi-label" data-i18n="kpi.case01">EMA 50</div></div>
+        <div class="kpi-card"><div class="kpi-val" id="kpi-c3">—</div><div class="kpi-label" data-i18n="kpi.case03">EMA+Engulfing HTF ★</div></div>
       </div>
       <div class="th-toolbar">
         <label class="upload-zone">
@@ -805,9 +805,9 @@ tbody tr:hover td { background: #faf9f7; }
         </label>
         <div class="filter-tabs">
           <button class="ftab active" onclick="filterTrades('all',this)" data-i18n="wl.filter.all">Tất cả</button>
-          <button class="ftab f1" onclick="filterTrades('1',this)">Case 01</button>
-          <button class="ftab f2" onclick="filterTrades('2',this)">Case 02</button>
-          <button class="ftab f3" onclick="filterTrades('3',this)">Case 03</button>
+          <button class="ftab f1" onclick="filterTrades('1',this)">EMA 50</button>
+          <button class="ftab f2" onclick="filterTrades('2',this)">Engulfing HTF</button>
+          <button class="ftab f3" onclick="filterTrades('3',this)">EMA+Engulfing HTF</button>
           <button class="ftab f4" onclick="filterTrades('4',this)">Case 04</button>
         </div>
       </div>
@@ -869,9 +869,9 @@ tbody tr:hover td { background: #faf9f7; }
       <label data-i18n="wp.label.chocase">Chờ Case</label>
       <select id="wp-case" onchange="onWpCaseChange(this.value)">
         <option value="" data-i18n-opt="wp.case.none">— Không chờ —</option>
-        <option value="1" data-i18n-opt="wp.case.01">Case 01 · CHOCH M30 / Pullback EMA50 H4</option>
-        <option value="2" data-i18n-opt="wp.case.02">Case 02 · CHOCH M5 / Pullback EMA50 H1</option>
-        <option value="3" data-i18n-opt="case.03.desc">Case 03 · Cấu trúc mạnh CHOCH M30/M15/M5 → M1</option>
+        <option value="1" data-i18n-opt="wp.case.01">EMA 50 · CHOCH M30 / Pullback EMA50 H4</option>
+        <option value="2" data-i18n-opt="wp.case.02">Engulfing HTF · CHOCH M5 / Pullback EMA50 H1</option>
+        <option value="3" data-i18n-opt="case.03.desc">EMA+Engulfing HTF · Cấu trúc mạnh CHOCH M30/M15/M5 → M1</option>
         <option value="4" data-i18n-opt="wp.case.04">Case 04 · Precision · Chạm EMA50 H1~M5 → M1</option>
       </select>
     </div>
@@ -937,16 +937,16 @@ tbody tr:hover td { background: #faf9f7; }
         <label class="form-label" data-i18n="modal.assign.label">Gán vào trường hợp *</label>
         <select class="form-select" id="modal-case" onchange="onCaseChange(this.value)">
           <option value="" data-i18n-opt="modal.case.none">— Chọn case —</option>
-          <option value="1" data-i18n-opt="wp.case.01">Case 01 · CHOCH M30 / Pullback EMA50 H4</option>
-          <option value="2" data-i18n-opt="wp.case.02">Case 02 · CHOCH M5 / Pullback EMA50 H1</option>
-          <option value="3" data-i18n-opt="case.03.desc">Case 03 · Cấu trúc mạnh CHOCH M30/M15/M5 → M1</option>
+          <option value="1" data-i18n-opt="wp.case.01">EMA 50 · CHOCH M30 / Pullback EMA50 H4</option>
+          <option value="2" data-i18n-opt="wp.case.02">Engulfing HTF · CHOCH M5 / Pullback EMA50 H1</option>
+          <option value="3" data-i18n-opt="case.03.desc">EMA+Engulfing HTF · Cấu trúc mạnh CHOCH M30/M15/M5 → M1</option>
           <option value="4" data-i18n-opt="wp.case.04">Case 04 · Precision · Chạm EMA50 H1~M5 → M1</option>
         </select>
       </div>
 
       <!-- ── CASE 01 RULES ── -->
       <div class="rule-fields" id="rules-1">
-        <span class="rule-section-title" data-i18n="modal.rules.c01">Case 01 · Xác nhận điều kiện</span>
+        <span class="rule-section-title" data-i18n="modal.rules.c01">EMA 50 · Xác nhận điều kiện</span>
         <div class="rule-row">
           <span data-i18n="wl.view.h4bias">H4 Bias</span>
           <select class="rsel" id="r1-h4">
@@ -991,7 +991,7 @@ tbody tr:hover td { background: #faf9f7; }
 
       <!-- ── CASE 02 RULES ── -->
       <div class="rule-fields" id="rules-2">
-        <span class="rule-section-title" data-i18n="modal.rules.c02">Case 02 · Xác nhận điều kiện</span>
+        <span class="rule-section-title" data-i18n="modal.rules.c02">Engulfing HTF · Xác nhận điều kiện</span>
         <div class="rule-row">
           <span data-i18n="wl.view.h4bias">H4 Bias</span>
           <select class="rsel" id="r2-h4">
@@ -1032,7 +1032,7 @@ tbody tr:hover td { background: #faf9f7; }
 
       <!-- ── CASE 03 RULES ── -->
       <div class="rule-fields" id="rules-3">
-        <span class="rule-section-title" data-i18n="modal.rules.c03">Case 03 · Xác nhận điều kiện</span>
+        <span class="rule-section-title" data-i18n="modal.rules.c03">EMA+Engulfing HTF · Xác nhận điều kiện</span>
         <div class="rule-row">
           <span data-i18n="wl.view.h4bias">H4 Bias</span>
           <select class="rsel" id="r3-h4">
@@ -1226,9 +1226,9 @@ tbody tr:hover td { background: #faf9f7; }
         <div class="log-sec-title" style="margin-bottom:0.6rem;display:flex;flex-direction:column;gap:0;align-items:flex-start;">
           <div id="lhist-filters" style="display:flex;flex-wrap:nowrap;gap:4px;align-items:center;overflow-x:auto;padding-bottom:2px;-webkit-overflow-scrolling:touch;scrollbar-width:none;">
             <button class="log-pill active" data-lhcase="" onclick="logFilterHist(this,'')" data-i18n="wl.filter.all">All</button>
-            <button class="log-pill" data-lhcase="Case 01" onclick="logFilterHist(this,'Case 01')" style="white-space:nowrap;" data-i18n="log.case.01">Case 01</button>
-            <button class="log-pill" data-lhcase="Case 02" onclick="logFilterHist(this,'Case 02')" style="white-space:nowrap;" data-i18n="log.case.02">Case 02</button>
-            <button class="log-pill" data-lhcase="Case 03" onclick="logFilterHist(this,'Case 03')" style="white-space:nowrap;" data-i18n="log.case.03">Case 03</button>
+            <button class="log-pill" data-lhcase="Case 01" onclick="logFilterHist(this,'Case 01')" style="white-space:nowrap;" data-i18n="log.case.01">EMA 50</button>
+            <button class="log-pill" data-lhcase="Case 02" onclick="logFilterHist(this,'Case 02')" style="white-space:nowrap;" data-i18n="log.case.02">Engulfing HTF</button>
+            <button class="log-pill" data-lhcase="Case 03" onclick="logFilterHist(this,'Case 03')" style="white-space:nowrap;" data-i18n="log.case.03">EMA+Engulfing HTF</button>
             <button class="log-pill" data-lhcase="Case 04" onclick="logFilterHist(this,'Case 04')" style="white-space:nowrap;" data-i18n="log.case.04">Case 04 ★</button>
             <button class="log-pill" data-lhcase="Other" onclick="logFilterHist(this,'Other')" style="white-space:nowrap;" data-i18n="log.case.other">Other</button>
           </div>
@@ -1352,9 +1352,9 @@ tbody tr:hover td { background: #faf9f7; }
       <div class="log-fg">
         <label>Case</label>
         <select id="lf-case">
-          <option>Case 01</option>
-          <option>Case 02</option>
-          <option>Case 03</option>
+          <option>EMA 50</option>
+          <option>Engulfing HTF</option>
+          <option>EMA+Engulfing HTF</option>
           <option>Case 04</option>
           <option>Other</option>
         </select>
@@ -4550,8 +4550,8 @@ document.addEventListener('click', e => {
       'kpi.profit':             'Net Profit',
       'kpi.winrate':            'Win Rate',
       'kpi.pf':                 'Profit Factor',
-      'kpi.case01':             'Case 01',
-      'kpi.case03':             'Case 03 ★',
+      'kpi.case01':             'EMA 50',
+      'kpi.case03':             'EMA+Engulfing HTF ★',
 
       // ── UPLOAD ──
       'upload.title':           'Upload MT5 Trade History HTML',
@@ -4648,7 +4648,7 @@ document.addEventListener('click', e => {
       'lf.img.result.hint':     '(paste hoặc click ＋)',
 
       // ── CASE OPTIONS ──
-      'case.03.desc':           'Case 03 · Cấu trúc mạnh CHOCH M30/M15/M5 → M1',
+      'case.03.desc':           'EMA+Engulfing HTF · Cấu trúc mạnh CHOCH M30/M15/M5 → M1',
 
       // ── WL VIEW SECTION LABELS ──
       'wl.view.h4bias':         'H4 Bias',
@@ -4662,17 +4662,17 @@ document.addEventListener('click', e => {
       'wp.bias.side':           '↔ Sideway',
       'wp.struct.none':         '— Chưa có —',
       'wp.case.none':           '— Không chờ —',
-      'wp.case.01':             'Case 01 · CHOCH M30 / Pullback EMA50 H4',
-      'wp.case.02':             'Case 02 · CHOCH M5 / Pullback EMA50 H1',
+      'wp.case.01':             'EMA 50 · CHOCH M30 / Pullback EMA50 H4',
+      'wp.case.02':             'Engulfing HTF · CHOCH M5 / Pullback EMA50 H1',
       'wp.case.04':             'Case 04 · Precision · Chạm EMA50 H1~M5 → M1',
       'wp.note.placeholder':    'VD: chờ pullback EMA50...',
 
       // ── MODAL ASSIGN CASE ──
       'modal.assign.label':     'Gán vào trường hợp *',
       'modal.case.none':        '— Chọn case —',
-      'modal.rules.c01':        'Case 01 · Xác nhận điều kiện',
-      'modal.rules.c02':        'Case 02 · Xác nhận điều kiện',
-      'modal.rules.c03':        'Case 03 · Xác nhận điều kiện',
+      'modal.rules.c01':        'EMA 50 · Xác nhận điều kiện',
+      'modal.rules.c02':        'Engulfing HTF · Xác nhận điều kiện',
+      'modal.rules.c03':        'EMA+Engulfing HTF · Xác nhận điều kiện',
       'modal.rules.c04':        'Case 04 · Follow H1 · Xác nhận điều kiện',
       'modal.opt.choose':       '— chọn —',
       'modal.opt.up':           'Tăng',
@@ -4706,9 +4706,9 @@ document.addEventListener('click', e => {
       'lbl.outcome.open':       'Đang mở',
       'lbl.entry':              'Entry',
       'lbl.log':                'Log',
-      'log.case.01':            'C1',
-      'log.case.02':            'C2',
-      'log.case.03':            'C3',
+      'log.case.01':            'EMA 50',
+      'log.case.02':            'Engulf HTF',
+      'log.case.03':            'EMA+Eng HTF',
       'log.case.04':            'C4 ★',
       'log.case.other':         'Khác',
       'wl.view.empty':          'Chưa có cặp nào được đánh dấu hiển thị.',
@@ -4760,8 +4760,8 @@ document.addEventListener('click', e => {
       'kpi.profit':             '純利益',
       'kpi.winrate':            '勝率',
       'kpi.pf':                 'プロフィットファクター',
-      'kpi.case01':             'ケース 01',
-      'kpi.case03':             'ケース 03 ★',
+      'kpi.case01':             'EMA 50',
+      'kpi.case03':             'EMA+Engulfing HTF ★',
 
       // ── UPLOAD ──
       'upload.title':           'MT5 取引履歴 HTMLをアップロード',
@@ -4861,7 +4861,7 @@ document.addEventListener('click', e => {
       'lf.img.result.hint':     '（ペーストまたは＋クリック）',
 
       // ── CASE ──
-      'case.03.desc':           'ケース03 · 強い構造 CHOCH M30/M15/M5 → M1',
+      'case.03.desc':           'EMA+Engulfing HTF · 強い構造 CHOCH M30/M15/M5 → M1',
 
       // ── WL VIEW ──
       'wl.view.h4bias':         'H4 バイアス',
@@ -4872,17 +4872,17 @@ document.addEventListener('click', e => {
       'wp.bias.side':           '↔ 横ばい',
       'wp.struct.none':         '— なし —',
       'wp.case.none':           '— 待機なし —',
-      'wp.case.01':             'ケース01 · CHOCH M30 / Pullback EMA50 H4',
-      'wp.case.02':             'ケース02 · CHOCH M5 / Pullback EMA50 H1',
+      'wp.case.01':             'EMA 50 · CHOCH M30 / Pullback EMA50 H4',
+      'wp.case.02':             'Engulfing HTF · CHOCH M5 / Pullback EMA50 H1',
       'wp.case.04':             'ケース04 · Precision · EMA50 H1~M5 → M1',
       'wp.note.placeholder':    '例: EMA50 プルバック待ち...',
 
       // ── MODAL ASSIGN CASE ──
       'modal.assign.label':     'ケースに割り当て *',
       'modal.case.none':        '— ケースを選択 —',
-      'modal.rules.c01':        'ケース01 · 条件確認',
-      'modal.rules.c02':        'ケース02 · 条件確認',
-      'modal.rules.c03':        'ケース03 · 条件確認',
+      'modal.rules.c01':        'EMA 50 · 条件確認',
+      'modal.rules.c02':        'Engulfing HTF · 条件確認',
+      'modal.rules.c03':        'EMA+Engulfing HTF · 条件確認',
       'modal.rules.c04':        'ケース04 · Follow H1 · 条件確認',
       'modal.opt.choose':       '— 選択 —',
       'modal.opt.up':           '上昇',
@@ -4916,9 +4916,9 @@ document.addEventListener('click', e => {
       'lbl.outcome.open':       'オープン中',
       'lbl.entry':              'エントリー',
       'lbl.log':                'ログ',
-      'log.case.01':            'C1',
-      'log.case.02':            'C2',
-      'log.case.03':            'C3',
+      'log.case.01':            'EMA 50',
+      'log.case.02':            'Engulf HTF',
+      'log.case.03':            'EMA+Eng HTF',
       'log.case.04':            'C4 ★',
       'log.case.other':         'その他',
       'wl.view.empty':          '表示するペアがありません。',
